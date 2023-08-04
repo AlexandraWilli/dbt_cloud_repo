@@ -1,11 +1,12 @@
 -- Here we create some Tables. When running dbt run, file gets built, run AND tables are created in SF. 
 -- BUT need to setup config block first if we want to have table
 -- config block: say what we want. Here we'd like to create tables, but by DEFAULT VIEWs are created
-{{
-    config (
-        materialized ='table'
-    )
-}}
+-- {{
+--     config (
+--         materialized ='table'
+--     )
+-- }}
+-- commented out config --> tell dbt in .yml file when you want which model as table, view etc.. --> SEE CONFIG FILE
 
 -- REF: refer to other model ==> aka here we 'import' the customer model which we'll select on like table later
 with customers as (
